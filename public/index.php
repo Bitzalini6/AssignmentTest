@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteId'])) {
       <h1>Product List</h1>
       <div id='nav-buttons'>
        <a href="./new_product.php"><button id='add-product-btn' type='button'>ADD</button></a> 
-        <button id='delete-product-btn' form='product_list' type='submit' name='delete'>MASS DELETE</button>
+        <button  class = "delete-checkbox" id='delete-product-btn' form='product_list' type='submit' name='delete'>MASS DELETE</button>
       </div>
     </nav>
   </header>
