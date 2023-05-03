@@ -29,16 +29,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteId'])) {
   </header>
   <main>
   <!-- Get all the products from the database and display them -->
-  <form action="" id='product_list' method='POST'>
+  <form action="" id='product_form' method='POST'>
   <?php foreach ($products as $product) { ?>
     <div class='product-info'> 
     <input type="checkbox" name="deleteId[]" value="<?= $product->id ?>" class="delete-checkbox">
     
-      <span><?= $product->sku; ?></span>
+      <span id="sku"><?= $product->sku; ?></span>
       <br>
-      <span><?= $product->name; ?></span>
+      <span id="name"><?= $product->name; ?></span>
       <br>
-      <span><?= $product->price;  ?></span> $
+      <span id="price"><?= $product->price;  ?></span> $
       <br>
       <span><?php
         echo $product->weight_kg != 0.0 ? "Weight: " . $product->weight_kg . "KG" : '';
